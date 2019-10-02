@@ -1,39 +1,54 @@
 import React from 'react';
+import LandingPage from './components/landingpage';
+import CodeChart from './components/codechart';
 import { User } from './Services/Auth/https/https';
+import { tap } from 'rxjs/operators';
 import './App.css';
+import spinner from './spinner.svg'
 
 export default class Hello extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      username: '',
+      username: null,
+      userData: {},
+      loading: false
     };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  public handleChange(event:any) : void {
-    this.setState({ username: event.target.value });
-  }
-
-  public handleSubmit(event:any) : void {
-    event.preventDefault();
-    const { username } = this.state;
-    User.getUser(username)
-      .subscribe(console.log);
+    this.setUsername = this.setUsername.bind(this);
+    this.fetchUserDetails = this.fetchUserDetails.bind(this);
   }
   
+  setUsername(username:string) {
+    this.setState({ username, loading: true });
+    this.fetchUserDetails(username);
+  }
+
+  fetchUserDetails(username:string) {
+    User.getUser(username)
+      .pipe(tap(() => this.setState({ loading: false })))
+      .subscribe(
+        (result:any) => this.setState({ userData: result }),
+        (error:any) => console.log(error)
+      );
+  }
+
   public render() {
+    const { username, userData, loading } = this.state;
     return (
-      <div className="App">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Enter Your Github Username:
-            <input type="text" value={this.state.username} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+      <div className="App-header">
+        {
+          !username ?
+          <LandingPage setUsername={this.setUsername} /> :
+          (
+            !loading ?
+            <CodeChart userdata={userData} /> :
+            <div>
+              <h4>Please wait!!</h4>
+              <img src={spinner} height='50px' alt='spinner' />
+            </div>
+          )
+        }
       </div>
     );
   }
