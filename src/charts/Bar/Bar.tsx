@@ -12,41 +12,7 @@ export const MyResponsiveBar = ({ data }: IBarProps) => {
       padding={0.3}
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
-      colors={{ scheme: 'nivo' }}
-      defs={[
-        {
-          id: 'dots',
-          type: 'patternDots',
-          background: 'inherit',
-          color: '#38bcb2',
-          size: 4,
-          padding: 1,
-          stagger: true,
-        },
-        {
-          id: 'lines',
-          type: 'patternLines',
-          background: 'inherit',
-          color: '#eed312',
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: 'issues',
-          },
-          id: 'dots',
-        },
-        {
-          match: {
-            id: 'pull request',
-          },
-          id: 'lines',
-        },
-      ]}
+      colors={["#588B8B", "#ffffff", "#FFD5C2", "#F28F3B", "teal", "#C8553D"]}
       borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
       axisTop={null}
       axisRight={null}
@@ -54,7 +20,7 @@ export const MyResponsiveBar = ({ data }: IBarProps) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'country',
+        legend: 'Years',
         legendPosition: 'middle',
         legendOffset: 32,
       }}
@@ -62,7 +28,7 @@ export const MyResponsiveBar = ({ data }: IBarProps) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'food',
+        legend: 'Contributions',
         legendPosition: 'middle',
         legendOffset: -40,
       }}
@@ -96,6 +62,10 @@ export const MyResponsiveBar = ({ data }: IBarProps) => {
       animate={true}
       motionStiffness={90}
       motionDamping={15}
+      theme={{
+        textColor: '#9CA3AF',
+        fontSize: 10.5,
+      }}
     />
   );
-}
+};

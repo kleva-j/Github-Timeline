@@ -1,13 +1,23 @@
 import * as React from 'react';
+import ReactTooltip from 'react-tooltip';
+import GitHubCalendar from 'react-github-calendar';
+
 // import { forkJoin } from 'rxjs';
 
 // import { User } from './services/api';
 
 import './App.css';
-import { MyResponsiveBar } from './charts/Bar';
-import { BarChartDataSample } from './charts/Bar.sample';
+import { MyResponsivePie } from './charts/Pie/Pie';
+import { MyResponsiveBar } from './charts/Bar/Bar';
+import { BarChartDataSample } from './charts/Bar/Bar.sample';
+import { PieChartDataSample } from './charts/Pie/Pie.sample';
+import { MyResponsiveSwarmPlot } from './charts/Swarmplot/Swarm';
+import { SwarmChartDataSample } from './charts/Swarmplot/Swarm.sample';
+import { IContextInterface, UserContext } from './contexts/UserContext';
 
 const App: React.FC = () => {
+  const context = React.useContext(UserContext) as IContextInterface;
+  const { username, theme } = context?.currentUser;
   // React.useEffect(() => {
   //   const userEvents = forkJoin([User.getUser('kleva-j'), User.getUserRepos('kleva-j')]).subscribe(console.log);
   //   return () => {
@@ -16,16 +26,16 @@ const App: React.FC = () => {
   // }, []);
 
   return (
-    <section className="flex min-h-screen bg-primary-bg">
-      <article className="flex-1 min-h-screen">
-        <nav className="flex justify-between w-11/12 m-auto h-16 items-center mb-16">
-          <aside className="border-2 bg-primary-light rounded-tr-full rounded-br-full h-10 w-6"></aside>
+    <section className="grid__section min-h-screen bg-primary-bg">
+      <article className="grid__article min-h-screen">
+        <nav className="header__nav flex justify-between h-16 items-center">
+          <aside className="border bg-primary-light rounded-tr-full rounded-br-full h-10 w-6"></aside>
           <aside className="flex">
             <ul className="flex mr-4 items-center">
-              <li className="mx-4 border-transparent border-b-2 hover:border-primary-textlight text-lg text-primary-textlight font-medium cursor-pointer">
+              <li className="mx-4 border-transparent border-b hover:border-primary-textlight text-lg text-primary-textlight font-medium cursor-pointer">
                 Timeline
               </li>
-              <li className="mx-4 border-transparent border-b-2 hover:border-primary-textlight text-lg text-primary-textlight font-medium cursor-pointer">
+              <li className="mx-4 border-transparent border-b hover:border-primary-textlight text-lg text-gray-400 font-medium cursor-pointer">
                 Jobs
               </li>
             </ul>
@@ -42,8 +52,8 @@ const App: React.FC = () => {
           </aside>
         </nav>
 
-        <main className="w-11/12 m-auto mb-10">
-          <div className="mb-8">
+        <main className="grid__main">
+          <aside className="mb-5">
             <h1 className="text-primary-textlight text-4xl my-4">Dashboard</h1>
             <ul className="flex items-center">
               <li className="mr-12 py-2 text-base text-primary-textlight">
@@ -51,45 +61,54 @@ const App: React.FC = () => {
                   Overview
                 </a>
               </li>
-              <li className="mr-12 py-2 text-base text-primary-textlight">
+              <li className="mr-12 py-2 text-base text-gray-400">
                 <a href="/" className="appearance-none hover:text-primary-light">
                   Repositories
                 </a>
               </li>
-              <li className="mr-12 py-2 text-base text-primary-textlight">
+              <li className="mr-12 py-2 text-base text-gray-400">
                 <a href="/" className="appearance-none hover:text-primary-light">
                   Organisations
                 </a>
               </li>
-              <li className="mr-12 py-2 text-base text-primary-textlight">
+              <li className="mr-12 py-2 text-base text-gray-400">
                 <a href="/" className="appearance-none hover:text-primary-light">
                   Followers/Followings
                 </a>
               </li>
             </ul>
-          </div>
+          </aside>
 
-          <div className="flex">
-            <div className="w-3/12 h-96 mr-2">
-              <div className="flex h-32">
-                <div className=""></div>
-                <div className="w-20 bg-primary-lem rounded-4xl"></div>
-              </div>
-              <div className="flex mt-6 border-2 h-56"></div>
+          <aside className="grid__main--aside">
+            <div className="border border-teal-300 rounded-md row-span-full">
+              <MyResponsivePie data={PieChartDataSample} />
             </div>
-            <div className="border-2 border-teal-300 flex-1 rounded-md h-96 mx-4"></div>
-            <div className="border-2 border-teal-300 w-2/12 rounded-md h-96 ml-2"></div>
-          </div>
+            <div className="border border-teal-300 rounded-md row-span-full">
+              <MyResponsiveSwarmPlot data={SwarmChartDataSample} />
+            </div>
+          </aside>
         </main>
 
-        <aside className="border-2 w-11/12 m-auto flex rounded-md">
-          <div className="border-2 border-teal-300 flex-1 rounded-md h-56"></div>
-          <div className="border-2 border-teal-300 flex-1 rounded-md h-56">
-            {/* <MyResponsiveBar data={BarChartDataSample} /> */}
+        <aside className="grid__aside rounded-md">
+          <div className="aside__content">
+            <div className="inline-block border border-teal-300 rounded-md px-4 pt-3">
+              <GitHubCalendar
+                username={`${username}`}
+                fontSize={12}
+                theme={theme}
+                // blockSize={blockSize}
+                showTotalCount={false}
+              >
+                <ReactTooltip delayShow={50} html />
+              </GitHubCalendar>
+            </div>
+          </div>
+          <div className="border border-teal-300 rounded-md">
+            <MyResponsiveBar data={BarChartDataSample} />
           </div>
         </aside>
       </article>
-      <article className="w-64 min-h-screen bg-primary-dark">Right section</article>
+      <article className="min-h-screen bg-primary-dark">Right section</article>
     </section>
   );
 };
