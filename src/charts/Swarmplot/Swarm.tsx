@@ -2,7 +2,7 @@ import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 
 import { ISwarmProps } from './Swarm.interface';
 
-export const MyResponsiveSwarmPlot = ({ data }: ISwarmProps) => (
+export const SwarmPlot = ({ data }: ISwarmProps) => (
   <ResponsiveSwarmPlot
     data={data}
     groups={['group A', 'group B', 'group C']}
