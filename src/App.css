@@ -36,7 +36,7 @@
 
 .grid__main {
   grid-column: 2 / span 16;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .grid__main--aside {
@@ -47,15 +47,11 @@
 }
 
 .grid__aside {
-  padding-top: 2rem;
+  padding-top: 1rem;
   grid-column: 2 / span 16;
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 600px);
-  grid-template-rows: minmax(min-content, 15rem);
+  grid-template-columns: auto auto;
+  /* grid-template-columns: 1fr minmax(auto, 600px); */
+  grid-template-rows: minmax(min-content, 18rem);
   grid-column-gap: 1rem;
-}
-
-.aside__content {
-  align-self: flex-start;
-  min-height: 100px;
 }

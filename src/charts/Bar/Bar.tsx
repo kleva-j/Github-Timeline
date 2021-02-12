@@ -2,7 +2,7 @@ import { ResponsiveBar } from '@nivo/bar';
 
 import { IBarProps } from './Bar.interface';
 
-export const MyResponsiveBar = ({ data }: IBarProps) => {
+export const Bar = ({ data }: IBarProps) => {
   return (
     <ResponsiveBar
       data={data}
@@ -47,13 +47,13 @@ export const MyResponsiveBar = ({ data }: IBarProps) => {
           itemWidth: 100,
           itemHeight: 20,
           itemDirection: 'left-to-right',
-          itemOpacity: 0.85,
+          itemOpacity: 1,
           symbolSize: 15,
           effects: [
             {
               on: 'hover',
               style: {
-                itemOpacity: 1,
+                itemTextColor: '#fff',
               },
             },
           ],
