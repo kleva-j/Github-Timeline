@@ -1,16 +1,40 @@
-import React from 'react';
 import { render } from 'react-dom';
+import React, { StrictMode } from 'react';
+import { onError } from '@apollo/client/link/error';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 
 import App from './App';
 import { UserProvider } from './contexts/UserContext';
 
 import './index.css';
 
-render(
-  <React.StrictMode>
-    <UserProvider>
-      <App />
-    </UserProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+const { log } = console;
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: from([
+    onError(({ graphQLErrors, networkError }) => {
+      if (graphQLErrors) {
+        graphQLErrors.forEach(({ message, locations, path }) =>
+          log(`Graphql error occured: ${message} ${locations} ${path}`),
+        );
+      }
+      if (networkError) log(networkError.message);
+    }),
+    new HttpLink({ uri: process.env.REACT_APP_BACKEND_JOBS_API }),
+  ]),
+});
+
+export const rootElement = document.getElementById('root');
+
+export const Node = (
+  <StrictMode>
+    <ApolloProvider client={client}>
+      <UserProvider>
+        <App />
+      </UserProvider>
+    </ApolloProvider>
+  </StrictMode>
 );
+
+render(Node, rootElement);

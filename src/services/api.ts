@@ -2,7 +2,8 @@ import { ajax } from 'rxjs/ajax';
 import { of, Observable } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
 
-const API_ROOT = 'https://api.github.com/';
+// const API_ROOT = 'https://api.github.com/';
+const API_ROOT_GRAPHQL = 'https://api.github.com/graphql';
 const JOB_API = 'https://jobs.github.com/positions.json';
 
 const requests = (baseUrl: string) => {
@@ -14,6 +15,7 @@ const requests = (baseUrl: string) => {
         method: 'GET',
         headers: {
           Accept: 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
         },
         ...config,
       }).pipe(
@@ -29,7 +31,7 @@ const requests = (baseUrl: string) => {
 };
 
 const User = (() => {
-  const Request = requests(API_ROOT);
+  const Request = requests(API_ROOT_GRAPHQL);
   return {
     getUser<T>(username: string): Observable<T> | any {
       return Request.get(`users/${username}`);
@@ -50,7 +52,15 @@ const User = (() => {
       return Request.get(`users/${username}/orgs`);
     },
     getSingleRepo<T>(username: string, repo: string): Observable<T> | any {
-      return Request.get(`users/${username}/repo/${repo}`);
+      return Request.get('', {
+        body: JSON.stringify({
+          query: `
+            query {
+              repository(owner: "${username}", name: "${repo}") {}
+            }
+          `,
+        }),
+      });
     },
   };
 })();

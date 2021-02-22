@@ -1,35 +1,14 @@
 import * as React from 'react';
-// import ReactTooltip from 'react-tooltip';
-// import GitHubCalendar from 'react-github-calendar';
-
-// import { forkJoin } from 'rxjs';
-
-// import { User } from './services/api';
-
-import './App.css';
 
 import { Pie } from './charts/Pie/Pie';
 import { Bar } from './charts/Bar/Bar';
 import { SwarmPlot } from './charts/Swarmplot/Swarm';
 import { Calendar } from './charts/Calendar/Calendar';
-
 import { BarChartDataSample } from './charts/Bar/Bar.sample';
 import { PieChartDataSample } from './charts/Pie/Pie.sample';
-// import { CalendarSampleData } from './charts/Calendar/Calendar.sample';
 import { SwarmChartDataSample } from './charts/Swarmplot/Swarm.sample';
 
-// import { IContextInterface, UserContext } from './contexts/UserContext';
-
 const App: React.FC = () => {
-  // const context = React.useContext(UserContext) as IContextInterface;
-  // const { username, theme } = context?.currentUser;
-  // React.useEffect(() => {
-  //   const userEvents = forkJoin([User.getUser('kleva-j'), User.getUserRepos('kleva-j')]).subscribe(console.log);
-  //   return () => {
-  //     userEvents.unsubscribe();
-  //   };
-  // }, []);
-
   return (
     <section className="grid__section min-h-screen bg-primary-bg">
       <article className="grid__article min-h-screen">
@@ -96,8 +75,8 @@ const App: React.FC = () => {
 
         <aside className="grid__aside rounded-md">
           <div className="border border-teal-300 rounded-md">
-              <Calendar />
-            </div>
+            <Calendar />
+          </div>
           <div className="border border-teal-300 rounded-md">
             <Bar data={BarChartDataSample} />
           </div>
