@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GetSingleJob it should test the success state. 1`] = `
+<aside>
+  <div
+    class="bg-primary-input mx-4 my-4"
+  >
+    <h5
+      data-testid="title"
+    >
+      Buck
+    </h5>
+    <p
+      data-testid="company"
+    >
+      company
+    </p>
+    <p
+      data-testid="type"
+    >
+      bulldog
+    </p>
+    <p
+      data-testid="location"
+    >
+      location
+    </p>
+    <p
+      data-testid="created"
+    >
+      created_at
+    </p>
+    <a
+      data-testid="url"
+      href="some_random_url"
+    >
+      Read More...
+    </a>
+  </div>
+</aside>
+`;
