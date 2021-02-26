@@ -10,7 +10,7 @@
     "@nivo/core": "^0.67.0",
     "@nivo/pie": "^0.67.0",
     "@nivo/swarmplot": "^0.67.0",
-    "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.6.3",
@@ -19,15 +19,17 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.7",
-    "autoprefixer": "9",
+    "autoprefixer": "^9",
     "graphql": "^15.5.0",
     "lodash": "^4.17.21",
-    "postcss": "7",
+    "postcss": "^7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "rxjs": "^6.6.3",
+    "styled-components": "^5.2.1",
+    "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
@@ -40,8 +42,12 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "!src/index.tsx"
+      "src/**/*.{ts,tsx}"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      "macros"
     ]
   },
   "eslintConfig": {
@@ -63,6 +69,8 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.7",
+    "babel-plugin-macros": "^3.0.1",
     "prop-types": "^15.7.2"
   }
 }
