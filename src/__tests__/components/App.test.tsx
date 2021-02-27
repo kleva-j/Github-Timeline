@@ -1,4 +1,4 @@
-import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
 import { render, cleanup } from '@testing-library/react';
 
@@ -10,10 +10,24 @@ describe('App', () => {
   test('renders the app', () => {
     const { container, getByText } = render(
       <MockedProvider mocks={[]} addTypename={false}>
-        <App />
+        <MemoryRouter initialEntries={['/']}>
+          <App />
+        </MemoryRouter>
       </MockedProvider>,
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(getByText('Timeline')).toBeTruthy();
+  });
+
+  test('renders 404 Not Found', () => {
+    const { container, getByText } = render(
+      <MockedProvider mocks={[]} addTypename={false}>
+        <MemoryRouter initialEntries={['/not-found']}>
+          <App />
+        </MemoryRouter>
+      </MockedProvider>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(getByText('404 NOT FOUND')).toBeTruthy();
   });
 });

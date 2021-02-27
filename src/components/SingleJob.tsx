@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 
-import { GetAllJobs } from './GetAllJobs';
 import { LOAD_SINGLE_JOB } from '../GraphQL/Queries';
 
 export interface Job {
@@ -44,6 +43,6 @@ export const GetSingleJob: React.FC<Props> = ({ id }) => {
   );
 };
 
-GetAllJobs.propTypes = {
+GetSingleJob.propTypes = {
   id: PropTypes.string.isRequired,
 };
