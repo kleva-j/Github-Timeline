@@ -1,6 +1,7 @@
 import { render } from 'react-dom';
 import React, { StrictMode } from 'react';
 import { onError } from '@apollo/client/link/error';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 
 import App from './App';
@@ -31,7 +32,9 @@ export const Node = (
   <StrictMode>
     <ApolloProvider client={client}>
       <UserProvider>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </UserProvider>
     </ApolloProvider>
   </StrictMode>

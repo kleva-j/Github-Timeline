@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import { LOAD_JOBS } from '../GraphQL/Queries';
-import { Job } from './GetSingleJob';
+import { Job } from './SingleJob';
 
 export const GetAllJobs: React.FC = () => {
   const { error, loading, data } = useQuery(LOAD_JOBS);
