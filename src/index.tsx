@@ -4,8 +4,10 @@ import { onError } from '@apollo/client/link/error';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 
+import { UserProvider } from 'contexts/UserContext';
+import { AuthProvider } from 'contexts/AuthContext';
+
 import App from './App';
-import { UserProvider } from './contexts/UserContext';
 
 import './index.css';
 
@@ -31,11 +33,13 @@ export const rootElement = document.getElementById('root');
 export const Node = (
   <StrictMode>
     <ApolloProvider client={client}>
-      <UserProvider>
-        <Router>
-          <App />
-        </Router>
-      </UserProvider>
+      <AuthProvider>
+        <UserProvider>
+          <Router>
+            <App />
+          </Router>
+        </UserProvider>
+      </AuthProvider>
     </ApolloProvider>
   </StrictMode>
 );

@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
-import { Node, rootElement } from '../../index';
+
+import { Node, rootElement } from 'index';
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
 

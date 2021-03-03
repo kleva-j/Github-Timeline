@@ -1,55 +1,44 @@
-import * as React from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 
-export interface IContextInterface {
-  currentUser: User;
+import { initialState, UserReducer } from 'reducers/user';
+
+export interface UserInterface {
+  currentUser: User | undefined;
   loading: boolean;
-  currentPage: string;
+  isAuthenticated: boolean;
+  error: Error | null;
+  theme?: any;
 }
-
-type theme = {
-  background: string;
-  text: string;
-  grade4: string;
-  grade3: string;
-  grade2: string;
-  grade1: string;
-  grade0: string;
-}
-
-type colorTheme = theme | undefined;
 
 type User = {
   username: string | undefined;
-  theme: colorTheme;
-  // blockSize: number;
 };
 
-type Props = {
-  children: React.ReactNode;
+export const UserStateContext = createContext<UserInterface>(initialState);
+export const UserDispatchContext = createContext<React.Dispatch<any> | null>(null);
+
+export const useUserState = () => {
+  const context = useContext(UserStateContext);
+  if (context === undefined) {
+    throw new Error('useUserState must be used within a UserProvider');
+  }
+  return context;
 };
 
-export const UserContext = React.createContext<IContextInterface | null>(null);
+export const useUserDispatch = () => {
+  const context = useContext(UserDispatchContext);
+  if (context === undefined) {
+    throw new Error('useUserDispatch must be used within a UserProvider');
+  }
+  return context;
+};
 
-const { Provider } = UserContext;
+export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, dispatch] = useReducer(UserReducer, initialState);
 
-export const UserProvider: React.FC<Props> = ({ children }: Props) => {
-  const [user] = React.useState<IContextInterface | null>({
-    loading: false,
-    currentPage: 'timeline',
-    currentUser: {
-      username: 'kleva-j',
-      theme: {
-        background: 'transparent',
-        text: '#9CA3AF',
-        grade4: 'hsl(338, 78%, 30%)',
-        grade3: 'hsl(338, 78%, 44%)',
-        grade2: 'hsl(338, 78%, 58%)',
-        grade1: 'hsl(338, 78%, 72%)',
-        grade0: '#eee',
-      },
-      // blockSize: 10,
-    },
-  });
-
-  return <Provider value={user}>{children}</Provider>;
+  return (
+    <UserStateContext.Provider value={user}>
+      <UserDispatchContext.Provider value={dispatch}>{children}</UserDispatchContext.Provider>
+    </UserStateContext.Provider>
+  );
 };

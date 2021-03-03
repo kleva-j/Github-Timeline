@@ -43,6 +43,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "<rootDir>/src/charts"
     ]
   },
   "babel": {
@@ -72,5 +76,6 @@
     "@types/styled-components": "^5.1.7",
     "babel-plugin-macros": "^3.0.1",
     "prop-types": "^15.7.2"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }

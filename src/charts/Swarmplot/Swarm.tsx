@@ -13,7 +13,7 @@ export const SwarmPlot = ({ data }: ISwarmProps) => (
     layout="horizontal"
     forceStrength={4}
     simulationIterations={100}
-    colors={["#588B8B", "#ffffff", "#FFD5C2", "#F28F3B", "teal", "#C8553D"]}
+    colors={['#588B8B', '#ffffff', '#FFD5C2', '#F28F3B', 'teal', '#C8553D']}
     colorBy="id"
     borderColor={{
       from: 'color',
