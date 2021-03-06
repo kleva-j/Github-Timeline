@@ -1,15 +1,14 @@
 import React from 'react';
-import tw from 'tailwind.macro';
-import styled from 'styled-components';
 
-const Button = styled('button')`
-  ${tw`font-mono text-red-400`};
-`;
+import { Footer } from 'components/Footer';
+import { Navbar } from 'components/Navbar';
 
-export const Timeline: React.FC = () => {
-  return (
-    <section className="grid__section min-h-screen bg-primary-bg">
-      <Button>Timeline</Button>
-    </section>
-  );
-};
+export const Timeline: React.FC = () => (
+  <>
+    <Navbar transparent={false} />
+    <article className="my-10">
+      <h2 className="text-gray-500 text-center">This is the Timeline page.</h2>
+    </article>
+    <Footer absolute />
+  </>
+);

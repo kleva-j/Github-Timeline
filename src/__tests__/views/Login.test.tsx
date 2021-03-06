@@ -1,19 +1,21 @@
-import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { cleanup, render } from '@testing-library/react';
 
-import App from '../../App';
+import { Login } from 'views/Login';
+import { AuthProvider } from 'contexts/AuthContext';
 
 describe('Login Page', () => {
   afterEach(cleanup);
 
-  test('should render the Login page', () => {
+  test('should render the Login view', () => {
     const { container, getByText } = render(
-      <MemoryRouter initialEntries={['/login']}>
-        <App />
-      </MemoryRouter>,
+      <AuthProvider>
+        <MemoryRouter initialEntries={['/login']}>
+          <Login />
+        </MemoryRouter>
+      </AuthProvider>,
     );
     expect(container.firstChild).toMatchSnapshot();
-    expect(getByText('This is the Login page.')).toBeTruthy();
+    expect(getByText('Sign in with')).toBeTruthy();
   });
 });
