@@ -7,7 +7,6 @@ export const AuthDispatchContext = createContext<React.Dispatch<any> | null>(nul
 
 export const useAuthState = () => {
   const context = useContext(AuthStateContext);
-  // console.log(context, 'Check here')
   if (context === undefined) {
     throw new Error('useAuthState must be used within a AuthProvider');
   }

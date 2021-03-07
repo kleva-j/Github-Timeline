@@ -46,7 +46,9 @@
     ],
     "coveragePathIgnorePatterns": [
       "node_modules",
-      "<rootDir>/src/charts"
+      "<rootDir>/src/charts",
+      "<rootDir>/src/react-app-env.d.ts",
+      "<rootDir>/src/reportWebVitals.ts"
     ]
   },
   "babel": {
