@@ -12,9 +12,9 @@ const defaultScheme = {
   light: '#fafafb',
   textlight: '#dadadb',
   bg: '#1d1a21',
-  gray: "#18151cee",
-  input: "#2a2a34",
-  lem: "#8AC285"
+  gray: '#18151cee',
+  input: '#2a2a34',
+  lem: '#8AC285',
 };
 
 module.exports = {
@@ -118,6 +118,7 @@ module.exports = {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
+      '100%': '100%',
     },
     borderColor: (theme) => ({
       ...theme('colors'),
