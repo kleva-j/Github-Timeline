@@ -1,5 +1,4 @@
-import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 
 import { Navbar } from 'components/Navbar';
 import { MemoryRouter } from 'react-router-dom';
@@ -37,5 +36,16 @@ describe('Navbar', () => {
     expect(getByText('Jobs')).toBeTruthy();
     expect(classList?.contains('relative')).toBeTruthy();
     expect(list?.contains('block')).toBeTruthy();
+  });
+
+  test('Should render the Navbar and update navbar open state', () => {
+    const { queryByTestId } = render(
+      <MemoryRouter>
+        <Navbar transparent />
+      </MemoryRouter>,
+    );
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+    expect(queryByTestId('list')).toBeInTheDocument();
   });
 });

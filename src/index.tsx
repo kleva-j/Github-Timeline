@@ -19,10 +19,10 @@ const client = new ApolloClient({
     onError(({ graphQLErrors, networkError }) => {
       if (graphQLErrors) {
         graphQLErrors.forEach(({ message, locations, path }) =>
-          log(`Graphql error occured: ${message} ${locations} ${path}`),
+          log(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`),
         );
       }
-      if (networkError) log(networkError.message);
+      if (networkError) log(`[Network error]: ${networkError}`);
     }),
     new HttpLink({ uri: process.env.REACT_APP_BACKEND_JOBS_API }),
   ]),

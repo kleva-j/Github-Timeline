@@ -1,93 +1,491 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Jobs Page should render the Jobs page 1`] = `
-<nav
-  class="relative bg-white shadow-lg flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
-  data-testid="navbar"
+<section
+  class="min-h-screen"
 >
-  <div
-    class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+  <nav
+    class="relative bg-white shadow-lg flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    data-testid="navbar"
   >
     <div
-      class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+      class="container px-4 mx-auto flex flex-wrap items-center justify-between"
     >
-      <a
-        class="text-gray-800 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
-        href="/"
+      <div
+        class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
       >
-        Github Timeline
-      </a>
-      <button
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-        type="button"
+        <a
+          class="text-gray-800 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
+          href="/"
+        >
+          Github Timeline
+        </a>
+        <button
+          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button"
+        >
+          <i
+            class="text-gray-800 fas fa-bars"
+          >
+            <img
+              alt="burger-nav"
+              src="Bars.svg"
+            />
+          </i>
+        </button>
+      </div>
+      <div
+        class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+        data-testid="list"
+        id="example-navbar-warning"
       >
-        <i
-          class="text-gray-800 fas fa-bars"
+        <ul
+          class="flex flex-col lg:flex-row list-none mr-auto"
+        >
+          <li
+            class="flex items-center"
+          >
+            <a
+              class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="/jobs"
+            >
+              <i
+                class="text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
+              />
+               
+              Jobs
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="flex flex-col lg:flex-row list-none lg:ml-auto"
+        >
+          <li
+            class="flex items-center"
+          >
+            <a
+              class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="/jobs#twitter"
+            >
+              <i
+                class="text-gray-500 fab fa-twitter text-lg leading-lg "
+              />
+              <span
+                class="lg:hidden inline-block ml-2"
+              >
+                Tweet
+              </span>
+            </a>
+          </li>
+          <li
+            class="flex items-center"
+          >
+            <a
+              class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="/jobs#github-stars"
+            >
+              <i
+                class="text-gray-500 fab fa-github text-lg leading-lg "
+              />
+              <span
+                class="lg:hidden inline-block ml-2"
+              >
+                Star
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <article
+    class="my-4 px-3"
+  >
+    <form
+      class="flex flex-col sm:flex-row max-w-3xl mx-auto"
+    >
+      <aside
+        class="flex-1 my-2 md:mx-2 md:ml-0"
+      >
+        <label
+          class="text-sm font-semibold"
+          for="desc"
+        >
+          Job Description
+        </label>
+        <input
+          class="w-full py-2 px-4 border rounded bg-white"
+          id="desc"
+          name="description"
+          placeholder="Filter by title, benefits, companies, expertise"
+          type="text"
         />
+      </aside>
+      <aside
+        class="flex-1 my-2 sm:mx-2 md:mr-0"
+      >
+        <label
+          class="text-sm font-semibold"
+          for="location"
+        >
+          Location
+        </label>
+        <input
+          class="w-full py-2 px-4 border rounded bg-white"
+          id="location"
+          name="location"
+          placeholder="Filter by city, state, zip code or country"
+          type="text"
+        />
+      </aside>
+    </form>
+    <section
+      class="sc-jSgupP bpEqdu"
+    >
+      <button
+        class="sc-gKsewC fpguxs"
+        data-testid="id-0"
+      >
+        Full Time
       </button>
-    </div>
-    <div
-      class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-      data-testid="list"
-      id="example-navbar-warning"
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-1"
+      >
+        remote
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-2"
+      >
+        HTML
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-3"
+      >
+        CSS
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-4"
+      >
+        SASS
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-5"
+      >
+        JavaScript
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-6"
+      >
+        TypeScript
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-7"
+      >
+        React
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-8"
+      >
+        Angular
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-9"
+      >
+        Vue
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-10"
+      >
+        Svelte
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-11"
+      >
+        Java
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-12"
+      >
+        Ruby
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-13"
+      >
+        Python
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-14"
+      >
+        Nodejs
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-15"
+      >
+        Go
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-16"
+      >
+        Swift
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-17"
+      >
+        C
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-18"
+      >
+        C++
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-19"
+      >
+        C#
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-20"
+      >
+        Scala
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-21"
+      >
+        R
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-22"
+      >
+        Kotlin
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-23"
+      >
+        PHP
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-24"
+      >
+        Rust
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-25"
+      >
+        Elm
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-26"
+      >
+        Objective-C
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-27"
+      >
+        LISP
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-28"
+      >
+        Perl
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-29"
+      >
+        SQL
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-30"
+      >
+        Haskel
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-31"
+      >
+        Erlang
+      </button>
+      <button
+        class="sc-gKsewC erNndT"
+        data-testid="id-32"
+      >
+        Clojure
+      </button>
+    </section>
+    <article
+      class="w-full"
+      data-testid="jobs-article"
+    />
+    <nav
+      aria-label="Page navigation"
+      class="flex justify-center my-10"
     >
       <ul
-        class="flex flex-col lg:flex-row list-none mr-auto"
+        class="inline-flex space-x-2 items-center"
       >
-        <li
-          class="flex items-center"
-        >
-          <a
-            class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="/jobs"
+        <li>
+          <button
+            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100"
           >
-            <i
-              class="text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
-            />
+            <svg
+              class="w-4 h-4 fill-current"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-10 h-10 text-white transition-colors duration-150 bg-gray-900 border border-r-0 border-gray-600 rounded focus:outline-none"
+          >
+            1
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded focus:outline-none hover:bg-gray-100"
+          >
+            2
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded focus:outline-none hover:bg-gray-200"
+          >
+            3
+          </button>
+        </li>
+        <li>
+          <button
+            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100"
+          >
+            <svg
+              class="w-4 h-4 fill-current"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </article>
+  <footer
+    class="relative pb-6 bg-gray-900"
+    data-testid="footer"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <hr
+        class="mb-6 border-b-1 border-gray-700"
+      />
+      <div
+        class="flex flex-wrap items-center md:justify-between justify-center"
+      >
+        <div
+          class="w-full md:w-4/12 px-4"
+        >
+          <div
+            class="text-sm text-white font-semibold py-1"
+          >
+            Copyright © 
+            2021
              
-            Jobs
-          </a>
-        </li>
-      </ul>
-      <ul
-        class="flex flex-col lg:flex-row list-none lg:ml-auto"
-      >
-        <li
-          class="flex items-center"
-        >
-          <a
-            class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="/jobs#twitter"
-          >
-            <i
-              class="text-gray-500 fab fa-twitter text-lg leading-lg "
-            />
-            <span
-              class="lg:hidden inline-block ml-2"
+            <a
+              class="text-white hover:text-gray-400 text-sm font-semibold py-1"
+              href="http://michaelobasi.com"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              Tweet
-            </span>
-          </a>
-        </li>
-        <li
-          class="flex items-center"
+              Github Timeline
+            </a>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-8/12 px-4"
         >
-          <a
-            class="text-gray-800 hover:text-gray-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="/jobs#github-stars"
+          <ul
+            class="flex flex-wrap list-none md:justify-end  justify-center"
           >
-            <i
-              class="text-gray-500 fab fa-github text-lg leading-lg "
-            />
-            <span
-              class="lg:hidden inline-block ml-2"
-            >
-              Star
-            </span>
-          </a>
-        </li>
-      </ul>
+            <li>
+              <a
+                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
+                href="http://michaelobasi.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Michael Obasi
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
+                href="http://michaelobasi.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                About Me
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
+                href="https://frontendtips.netlify.app/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
+                href="https://github.com/kleva-j/Github-Timeline/blob/develop/LICENCE"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                MIT License
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </footer>
+</section>
 `;

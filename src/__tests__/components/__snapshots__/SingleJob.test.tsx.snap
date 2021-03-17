@@ -28,7 +28,7 @@ exports[`GetSingleJob it should test the success state. 1`] = `
     <p
       data-testid="created"
     >
-      created_at
+      Fri Mar 12 09:57:21 UTC 2021
     </p>
     <a
       data-testid="url"

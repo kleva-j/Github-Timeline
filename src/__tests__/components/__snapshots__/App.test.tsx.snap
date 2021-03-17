@@ -29,7 +29,12 @@ exports[`App renders the app 1`] = `
       >
         <i
           class="text-white fas fa-bars"
-        />
+        >
+          <img
+            alt="burger-nav"
+            src="Bars.svg"
+          />
+        </i>
       </button>
     </div>
     <div

@@ -2,7 +2,7 @@
 
 exports[`Navbar Should render the Navbar with no props. 1`] = `
 <footer
-  class="relative pb-6"
+  class="relative pb-6 bg-gray-900"
   data-testid="footer"
 >
   <div
@@ -88,7 +88,7 @@ exports[`Navbar Should render the Navbar with no props. 1`] = `
 
 exports[`Navbar Should render the Navbar. 1`] = `
 <footer
-  class="absolute w-full bottom-0 bg-gray-900 pb-6"
+  class="absolute w-full bottom-0 pb-6 bg-gray-900"
   data-testid="footer"
 >
   <div
