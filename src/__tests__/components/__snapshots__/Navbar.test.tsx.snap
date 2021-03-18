@@ -23,7 +23,12 @@ exports[`Navbar Should render the Navbar with no props. 1`] = `
       >
         <i
           class="text-gray-800 fas fa-bars"
-        />
+        >
+          <img
+            alt="burger-nav"
+            src="Bars.svg"
+          />
+        </i>
       </button>
     </div>
     <div
@@ -115,7 +120,12 @@ exports[`Navbar Should render the Navbar. 1`] = `
       >
         <i
           class="text-white fas fa-bars"
-        />
+        >
+          <img
+            alt="burger-nav"
+            src="Bars.svg"
+          />
+        </i>
       </button>
     </div>
     <div

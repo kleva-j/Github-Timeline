@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 
-import { LOAD_SINGLE_JOB } from '../GraphQL/Queries';
+import { LOAD_SINGLE_JOB } from 'GraphQL/Queries';
 
 export interface Job {
   id: string;
@@ -13,6 +13,9 @@ export interface Job {
   url: string;
   location: string;
   created_at: string;
+  company_logo: string;
+  company_url: string;
+  how_to_apply: string;
 }
 
 interface Props {
@@ -24,11 +27,22 @@ export const GetSingleJob: React.FC<Props> = ({ id }) => {
     variables: { id },
   });
 
-  if (loading) return <p data-testid="loading">Loading...</p>;
-  if (error) return <p data-testid="error">Oops, Error occured!!!</p>;
+  if (loading)
+    return (
+      <p data-testid="loading" className="text-center">
+        Loading...
+      </p>
+    );
+  if (error)
+    return (
+      <p data-testid="error" className="text-center">
+        Oops, Error occured!!!
+      </p>
+    );
 
   return (
     <aside>
+      {console.log(data)}
       <div key={data?.job?.id} className="bg-primary-input mx-4 my-4">
         <h5 data-testid="title">{data?.job?.title}</h5>
         <p data-testid="company">{data?.job?.company}</p>

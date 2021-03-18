@@ -1,48 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GetAllJobs it should test the success state. 1`] = `
-<section
-  class="grid__section min-h-screen bg-primary-bg"
+<article
+  class="w-full"
+  data-testid="jobs-article"
 >
-  <h2>
-    Github Jobs Listings
-  </h2>
-  <article
-    class="flex flex-wrap justify-evenly"
+  <aside
+    class="sc-eCssSg cPLCZE"
+    data-testid="job-XXXX"
   >
-    <aside
-      class="bg-primary-input mx-4 my-4"
-      data-testid="XXXX"
+    <div
+      class="flex flex-col sm:flex-row justify-between sm:items-center"
     >
-      <h5
-        data-testid="title"
+      <span
+        class="font-light text-gray-600"
+      >
+        Mar 12, 2021
+      </span>
+      <div
+        class="flex justify-start py-1"
+      >
+        <button
+          class="sc-iBPRYJ gEACbz text-gray-700 truncate whitespace-nowrap"
+          data-testid="type-XXXX"
+        >
+          bulldog
+        </button>
+        <button
+          class="sc-iBPRYJ gEACbz text-gray-700 truncate whitespace-nowrap"
+          data-testid="location-XXXX"
+        >
+          location
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-2"
+      data-testid="title-XXXX"
+    >
+      <a
+        class="text-xl text-gray-700 font-bold hover:text-gray-600"
+        href="some_random_url"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Buck
-      </h5>
-      <p
-        data-testid="company"
-      >
-        company
-      </p>
-      <p
-        data-testid="type"
-      >
-        bulldog
-      </p>
-      <p
-        data-testid="location"
-      >
-        location
-      </p>
-      <p>
-        created_at
-      </p>
-      <a
-        href="some_random_url"
-      >
-        Read More...
       </a>
-    </aside>
-  </article>
-</section>
+    </div>
+    <div
+      class="flex flex-col sm:flex-row justify-between sm:items-center mt-4"
+    >
+      <a
+        class="text-blue-600 hover:underline whitespace-nowrap order-last sm:order-first mt-2 sm:mt-0"
+        href="some_random_url"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Read more
+      </a>
+      <div>
+        <a
+          class="flex items-center"
+          href="some_company_url"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="avatar"
+            class="mx-4 w-10 h-10 object-cover hidden sm:block"
+            src="some_company_logo"
+          />
+          <h1
+            class="text-gray-600 font-bold"
+          >
+            company
+          </h1>
+        </a>
+      </div>
+    </div>
+  </aside>
+</article>
 `;

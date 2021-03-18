@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template1 Should render the Template1 component. 1`] = `
+<aside
+  class="sc-hKgILt eXItxJ"
+  data-testid="job-XXXX"
+>
+  <main
+    class="self-stretch w-20 mr-5 border"
+  />
+  <aside>
+    <div
+      class="flex items-center"
+    >
+      <h4
+        class="text-base font-semibold truncate whitespace-nowrap text-gray-800"
+        data-testid="title"
+      >
+        <a
+          href="some_random_url"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Buck
+           
+           - 
+        </a>
+      </h4>
+      <p
+        class="capitalize text-gray-600 text-sm pl-2 truncate whitespace-nowrap"
+        data-testid="company"
+      >
+        company
+      </p>
+    </div>
+    <p
+      class="text-gray-700 text-sm"
+      data-testid="created_at"
+    >
+      12/03/2021
+    </p>
+    <div
+      class="flex justify-start py-1"
+    >
+      <button
+        class="sc-iBPRYJ gEACbz text-gray-700"
+        data-testid="type"
+      >
+        bulldog
+      </button>
+      <button
+        class="sc-iBPRYJ gEACbz text-gray-700"
+        data-testid="location"
+      >
+        location
+      </button>
+    </div>
+  </aside>
+</aside>
+`;

@@ -4,7 +4,7 @@ export const validateUser = (dispatch: React.Dispatch<any> | any): any => {
   dispatch({ type: 'VALIDATE_USER' });
   return UserAuth.validate().subscribe((result: any) => {
     const { status, response } = result;
-    if (status === 200 && response.auth) {
+    if (status === 200 && response?.auth) {
       dispatch({
         type: 'VALIDATE_SUCCESS',
         payload: { isAuthenticated: response.auth },

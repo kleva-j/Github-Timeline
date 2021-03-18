@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Should render the Taglist component. 1`] = `
+<section
+  class="sc-jSgupP bpEqdu"
+>
+  <button
+    class="sc-gKsewC fpguxs"
+    data-testid="id-0"
+  >
+    Full Time
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-1"
+  >
+    remote
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-2"
+  >
+    HTML
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-3"
+  >
+    CSS
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-4"
+  >
+    SASS
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-5"
+  >
+    JavaScript
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-6"
+  >
+    TypeScript
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-7"
+  >
+    React
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-8"
+  >
+    Angular
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-9"
+  >
+    Vue
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-10"
+  >
+    Svelte
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-11"
+  >
+    Java
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-12"
+  >
+    Ruby
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-13"
+  >
+    Python
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-14"
+  >
+    Nodejs
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-15"
+  >
+    Go
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-16"
+  >
+    Swift
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-17"
+  >
+    C
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-18"
+  >
+    C++
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-19"
+  >
+    C#
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-20"
+  >
+    Scala
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-21"
+  >
+    R
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-22"
+  >
+    Kotlin
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-23"
+  >
+    PHP
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-24"
+  >
+    Rust
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-25"
+  >
+    Elm
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-26"
+  >
+    Objective-C
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-27"
+  >
+    LISP
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-28"
+  >
+    Perl
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-29"
+  >
+    SQL
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-30"
+  >
+    Haskel
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-31"
+  >
+    Erlang
+  </button>
+  <button
+    class="sc-gKsewC erNndT"
+    data-testid="id-32"
+  >
+    Clojure
+  </button>
+</section>
+`;

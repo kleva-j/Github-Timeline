@@ -1,5 +1,8 @@
+/* eslint-disable react/style-prop-object */
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import Bars from 'assets/svg/Bars.svg';
 
 interface Props {
   transparent?: boolean;
@@ -7,7 +10,7 @@ interface Props {
 }
 
 export const Navbar: React.FC<Props> = ({ transparent, navState = false }) => {
-  const [navbarOpen] = React.useState(navState);
+  const [navbarOpen, setNavbarOpen] = React.useState(navState);
   return (
     <nav
       data-testid="navbar"
@@ -30,9 +33,11 @@ export const Navbar: React.FC<Props> = ({ transparent, navState = false }) => {
           <button
             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
-            // onClick={() => setNavbarOpen(!navbarOpen)}
+            onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <i className={(transparent ? 'text-white' : 'text-gray-800') + ' fas fa-bars'}></i>
+            <i className={(transparent ? 'text-white' : 'text-gray-800') + ' fas fa-bars'}>
+              <img src={Bars} alt="burger-nav" />
+            </i>
           </button>
         </div>
         <div

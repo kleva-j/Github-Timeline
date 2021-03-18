@@ -11,6 +11,9 @@ export const LOAD_JOBS = gql`
       url
       location
       created_at
+      company_url
+      how_to_apply
+      company_logo
     }
   }
 `;
@@ -26,6 +29,9 @@ export const LOAD_SINGLE_JOB = gql`
       url
       location
       created_at
+      company_url
+      how_to_apply
+      company_logo
     }
   }
 `;
