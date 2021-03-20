@@ -341,10 +341,21 @@ exports[`Jobs Page should render the Jobs page 1`] = `
         Clojure
       </button>
     </section>
-    <article
-      class="w-full"
-      data-testid="jobs-article"
-    />
+    <div
+      class="text-center my-10"
+      data-testid="error"
+    >
+      <img
+        alt="Error gif"
+        class="select-none object-contain w-max mx-auto"
+        src="error-gif.webp"
+      />
+      <button
+        class="sc-bdfBwQ sc-fubCfw kOVXAr bsBkXx"
+      >
+        Refetch Content
+      </button>
+    </div>
     <nav
       aria-label="Page navigation"
       class="flex justify-center my-10"
@@ -354,7 +365,8 @@ exports[`Jobs Page should render the Jobs page 1`] = `
       >
         <li>
           <button
-            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100"
+            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100 cursor-not-allowed "
+            data-testid="prev-button"
           >
             <svg
               class="w-4 h-4 fill-current"
@@ -368,28 +380,8 @@ exports[`Jobs Page should render the Jobs page 1`] = `
         </li>
         <li>
           <button
-            class="w-10 h-10 text-white transition-colors duration-150 bg-gray-900 border border-r-0 border-gray-600 rounded focus:outline-none"
-          >
-            1
-          </button>
-        </li>
-        <li>
-          <button
-            class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded focus:outline-none hover:bg-gray-100"
-          >
-            2
-          </button>
-        </li>
-        <li>
-          <button
-            class="w-10 h-10 text-gray-600 transition-colors duration-150 rounded focus:outline-none hover:bg-gray-200"
-          >
-            3
-          </button>
-        </li>
-        <li>
-          <button
-            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100"
+            class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100 cursor-not-allowed "
+            data-testid="next-button"
           >
             <svg
               class="w-4 h-4 fill-current"
@@ -405,7 +397,7 @@ exports[`Jobs Page should render the Jobs page 1`] = `
     </nav>
   </article>
   <footer
-    class="relative pb-6 bg-gray-900"
+    class="sm:relative md:absolute w-full bottom-0 pb-6 bg-gray-900"
     data-testid="footer"
   >
     <div

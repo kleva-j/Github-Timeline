@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const LOAD_JOBS = gql`
-  query GetJobs {
-    jobs {
+  query GetJobs($page: Int!, $description: String, $location: String, $full_time: String) {
+    jobs(page: $page, description: $description, location: $location, full_time: $full_time) {
       id
       title
       type

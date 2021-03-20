@@ -68,7 +68,7 @@ export const Template2: React.FC<Job> = ({
         <div>
           <a className="flex items-center" href={company_url} rel="noopener noreferrer" target="_blank">
             <img
-              className="mx-4 w-10 h-10 object-cover hidden sm:block"
+              className="mx-4 w-10 h-10 object-contain hidden sm:block"
               src={company_logo || defaultLogo}
               alt="avatar"
             />

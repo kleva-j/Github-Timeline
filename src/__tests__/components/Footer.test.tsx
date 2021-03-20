@@ -11,7 +11,7 @@ describe('Navbar', () => {
 
     expect(container.firstChild).toMatchSnapshot();
     expect(getByText('Github Timeline')).toBeTruthy();
-    expect(classList?.contains('absolute')).toBeTruthy();
+    expect(classList?.contains('bottom-0')).toBeTruthy();
   });
 
   test('Should render the Navbar with no props.', () => {
