@@ -1,3 +1,4 @@
+import { ApolloError } from '@apollo/client';
 import { LOAD_JOBS, LOAD_SINGLE_JOB } from 'GraphQL/Queries';
 
 export const mockSingleJob = {
@@ -58,4 +59,28 @@ export const mockAllJobs = {
 export const errorMockAllJobs = {
   request: mockAllJobs.request,
   error: new Error('An error occurred'),
+};
+
+export const getAllJobsMockData = {
+  loadingState: {
+    loading: true,
+    error: undefined,
+    data: {
+      jobs: []
+    }
+  },
+  successState: {
+    loading: false,
+    error: undefined,
+    data: mockAllJobs.result.data
+  },
+  errorState: {
+    loading: false,
+    error: new ApolloError({}),
+    data: {
+      jobs: []
+    }
+  },
+  refetch: jest.fn(),
+  currentPage: 1
 };

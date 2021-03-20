@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GetAllJobs it should test the error state. 1`] = `
+<div
+  class="text-center my-10"
+  data-testid="error"
+>
+  <img
+    alt="Error gif"
+    class="select-none object-contain w-max mx-auto"
+    src="error-gif.webp"
+  />
+  <button
+    class="sc-bdfBwQ sc-fubCfw kOVXAr bsBkXx"
+  >
+    Refetch Content
+  </button>
+</div>
+`;
+
+exports[`GetAllJobs it should test the loading state. 1`] = `
+<div
+  class="text-center my-20 mx-auto w-max"
+  data-testid="loading"
+>
+  <img
+    alt="Loading gif"
+    class="select-none object-contain"
+    src="loading-gif.webp"
+  />
+</div>
+`;
+
 exports[`GetAllJobs it should test the success state. 1`] = `
 <article
   class="w-full"
@@ -67,7 +98,7 @@ exports[`GetAllJobs it should test the success state. 1`] = `
         >
           <img
             alt="avatar"
-            class="mx-4 w-10 h-10 object-cover hidden sm:block"
+            class="mx-4 w-10 h-10 object-contain hidden sm:block"
             src="some_company_logo"
           />
           <h1

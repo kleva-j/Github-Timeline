@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination Component Should render Pager 1`] = `
+<nav
+  aria-label="Page navigation"
+  class="flex justify-center my-10"
+>
+  <ul
+    class="inline-flex space-x-2 items-center"
+  >
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100 cursor-not-allowed "
+        data-testid="prev-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-white bg-gray-900 border border-r-0 border-gray-600 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-1"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-2"
+      >
+        2
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-5"
+      >
+        5
+      </button>
+    </li>
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="next-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination Component Should test Pager with navigate to next. 1`] = `
+<nav
+  aria-label="Page navigation"
+  class="flex justify-center my-10"
+>
+  <ul
+    class="inline-flex space-x-2 items-center"
+  >
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="prev-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-1"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-white bg-gray-900 border border-r-0 border-gray-600 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-2"
+      >
+        2
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-5"
+      >
+        5
+      </button>
+    </li>
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="next-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination Component Should test and set current page. 1`] = `
+<nav
+  aria-label="Page navigation"
+  class="flex justify-center my-10"
+>
+  <ul
+    class="inline-flex space-x-2 items-center"
+  >
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="prev-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-1"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-white bg-gray-900 border border-r-0 border-gray-600 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-2"
+      >
+        2
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-5"
+      >
+        5
+      </button>
+    </li>
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="next-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination Component Should test and set prev page. 1`] = `
+<nav
+  aria-label="Page navigation"
+  class="flex justify-center my-10"
+>
+  <ul
+    class="inline-flex space-x-2 items-center"
+  >
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 border rounded focus:outline-none hover:bg-gray-100 cursor-not-allowed "
+        data-testid="prev-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-white bg-gray-900 border border-r-0 border-gray-600 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-1"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-2"
+      >
+        2
+      </button>
+    </li>
+    <li>
+      <button
+        class="w-10 h-10 text-gray-600 hover:bg-gray-100 transition-colors duration-150 rounded focus:outline-none"
+        data-testid="pageNumber-5"
+      >
+        5
+      </button>
+    </li>
+    <li>
+      <button
+        class="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors duration-150 bg-white border rounded focus:outline-none hover:bg-gray-100 false "
+        data-testid="next-button"
+      >
+        <svg
+          class="w-4 h-4 fill-current"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;

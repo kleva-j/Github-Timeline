@@ -1,30 +1,60 @@
-import { cleanup } from '@testing-library/react';
+import { cleanup, fireEvent } from '@testing-library/react';
 
 import { GetAllJobs } from 'components/AllJobs';
-import { errorMockAllJobs, mockAllJobs } from 'testing-utils/mocks';
 import { customRender, waitForData } from 'testing-utils/customRender';
+import { errorMockAllJobs, getAllJobsMockData, mockAllJobs } from 'testing-utils/mocks';
 
 describe('GetAllJobs', () => {
   afterEach(cleanup);
 
   test('it should test the loading state.', async () => {
-    const { getByTestId } = customRender(<GetAllJobs />, [mockAllJobs]);
-    const loading = getByTestId('loading');
-    expect(loading.textContent).toContain('Loading...');
+    const { loading, error, data } = getAllJobsMockData.loadingState;
+    const refetch = jest.fn();
+    const { container, getByTestId } = customRender(
+      <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={1} />,
+      [mockAllJobs],
+    );
+    const loadingState = getByTestId('loading');
+    expect(container.firstChild).toMatchSnapshot();
+    expect(loadingState).toBeInTheDocument();
   });
 
   test('it should test the success state.', async () => {
-    const { container, getByTestId } = customRender(<GetAllJobs />, [mockAllJobs]);
+    const { loading, error, data } = getAllJobsMockData.successState;
+    const refetch = jest.fn();
+    const { container, getByTestId } = customRender(
+      <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={1} />,
+      [mockAllJobs],
+    );
     await waitForData();
-    const article = getByTestId('jobs-article')?.classList;
     expect(container.firstChild).toMatchSnapshot();
-    expect(article?.contains('w-full')).toBeTruthy();
+    const article = getByTestId('jobs-article');
+    expect(article?.classList?.contains('w-full')).toBeTruthy();
   });
 
   test('it should test the error state.', async () => {
-    const { getByTestId } = customRender(<GetAllJobs />, [errorMockAllJobs]);
+    const { loading, error, data } = getAllJobsMockData.errorState;
+    const refetch = jest.fn();
+    const { container, getByTestId } = customRender(
+      <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={1} />,
+      [errorMockAllJobs],
+    );
     await waitForData();
-    const error = getByTestId('error');
-    expect(error.textContent).toContain('Oops, Error occured!!!');
+    const errorState = getByTestId('error');
+    expect(container.firstChild).toMatchSnapshot();
+    expect(errorState).toBeInTheDocument();
+  });
+
+  test('it should test the refetch is visible when in error state and clicked.', async () => {
+    const { loading, error, data } = getAllJobsMockData.errorState;
+    const refetch = jest.fn();
+    const { getByRole } = customRender(
+      <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={1} />,
+      [errorMockAllJobs],
+    );
+    await waitForData();
+    const button = getByRole('button');
+    fireEvent.click(button);
+    expect(refetch).toHaveBeenCalled();
   });
 });

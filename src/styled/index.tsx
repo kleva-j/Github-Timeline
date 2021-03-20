@@ -2,7 +2,7 @@ import React from 'react';
 import tw from 'tailwind.macro';
 import styled from 'styled-components';
 
-export const Button: React.FC = styled('button')`
+export const Button: React.FC<any> = styled('button')`
   ${tw`bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs`};
 
   transition: all 0.15s ease;
@@ -63,4 +63,8 @@ export const TagSm: any = styled('button')`
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
+`;
+
+export const RefetchBtn = styled(Button)`
+  ${tw`text-white bg-gray-900`}
 `;

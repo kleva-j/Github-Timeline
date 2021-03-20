@@ -9965,6 +9965,11 @@ react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
+react-pagination-hook@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-pagination-hook/-/react-pagination-hook-0.0.1.tgz#7cfe3b28b3bdef6908fcf250f7f94bf21cd21257"
+  integrity sha512-0MqmKyR0I3GU0KHFCwxYYS5yFECCoUUyy6qC961bnOB4ZOsnJZ8bs72RE3638oRKL/iE73Scgso7aSqp4BmYdg==
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
