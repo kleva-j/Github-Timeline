@@ -12,6 +12,7 @@ exports[`Jobs Page should render the Jobs page 1`] = `
       class="container px-4 mx-auto flex flex-wrap items-center justify-between"
     >
       <div
+        aria-labelledby="nav-item"
         class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
       >
         <a
@@ -143,7 +144,7 @@ exports[`Jobs Page should render the Jobs page 1`] = `
       class="sc-jSgupP bpEqdu"
     >
       <button
-        class="sc-gKsewC fpguxs"
+        class="sc-gKsewC erNndT"
         data-testid="id-0"
       >
         Full Time
@@ -396,88 +397,5 @@ exports[`Jobs Page should render the Jobs page 1`] = `
       </ul>
     </nav>
   </article>
-  <footer
-    class="sm:relative md:absolute w-full bottom-0 pb-6 bg-gray-900"
-    data-testid="footer"
-  >
-    <div
-      class="container mx-auto px-4"
-    >
-      <hr
-        class="mb-6 border-b-1 border-gray-700"
-      />
-      <div
-        class="flex flex-wrap items-center md:justify-between justify-center"
-      >
-        <div
-          class="w-full md:w-4/12 px-4"
-        >
-          <div
-            class="text-sm text-white font-semibold py-1"
-          >
-            Copyright © 
-            2021
-             
-            <a
-              class="text-white hover:text-gray-400 text-sm font-semibold py-1"
-              href="http://michaelobasi.com"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github Timeline
-            </a>
-          </div>
-        </div>
-        <div
-          class="w-full md:w-8/12 px-4"
-        >
-          <ul
-            class="flex flex-wrap list-none md:justify-end  justify-center"
-          >
-            <li>
-              <a
-                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                href="http://michaelobasi.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Michael Obasi
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                href="http://michaelobasi.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                About Me
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                href="https://frontendtips.netlify.app/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                href="https://github.com/kleva-j/Github-Timeline/blob/develop/LICENCE"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                MIT License
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
 </section>
 `;

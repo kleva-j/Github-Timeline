@@ -31,6 +31,19 @@ exports[`GetAllJobs it should test the loading state. 1`] = `
 </div>
 `;
 
+exports[`GetAllJobs it should test the no-content state. 1`] = `
+<div
+  class="text-center my-20"
+  data-testid="no-content"
+>
+  <img
+    alt="No content"
+    class="select-none object-contain w-max mx-auto"
+    src="no-content.webp"
+  />
+</div>
+`;
+
 exports[`GetAllJobs it should test the success state. 1`] = `
 <article
   class="w-full"
@@ -97,7 +110,7 @@ exports[`GetAllJobs it should test the success state. 1`] = `
           target="_blank"
         >
           <img
-            alt="avatar"
+            alt="Company Logo"
             class="mx-4 w-10 h-10 object-contain hidden sm:block"
             src="some_company_logo"
           />

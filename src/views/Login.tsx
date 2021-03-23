@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -22,6 +23,10 @@ export const Login: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Login - Github Timeline</title>
+        <meta name="description" content="Gitline login page" />
+      </Helmet>
       <Navbar transparent />
       <main>
         <section className="absolute w-full h-full">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import React, { useEffect } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
@@ -17,10 +18,15 @@ const App: React.FC = () => {
     const userEvent = validateUser(dispatch);
     return () => {
       userEvent.unsubscribe();
-    }
+    };
   }, [dispatch]);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home - Github Timeline</title>
+        <link rel="canonical" href={process.env.REACT_APP_FRONTEND_URL} />
+      </Helmet>
       <Switch>
         <Redirect exact from="/" to="/timeline" />
         <ProtectedRoute exact path="/timeline" component={Timeline} />

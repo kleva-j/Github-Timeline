@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { usePagination } from 'react-pagination-hook';
 
 interface IProps {
@@ -7,8 +7,8 @@ interface IProps {
   setPage: Function;
 }
 
-export const Pager: React.FC<IProps> = ({ noOfItems=0, setPage }) => {
-  const limit = noOfItems / 10;
+export const Pager: React.FC<IProps> = memo(({ noOfItems = 0, setPage }) => {
+  const limit = Math.floor(noOfItems / 10);
   const numberOfPages = noOfItems % 10 ? limit + 1 : limit;
   const { activePage, isFirst, isLast, hasPrevious, hasNext, visiblePieces, goToPage } = usePagination({
     initialPage: 1,
@@ -18,7 +18,7 @@ export const Pager: React.FC<IProps> = ({ noOfItems=0, setPage }) => {
 
   useEffect(() => {
     setPage(activePage);
-  }, [activePage, setPage]);
+  }, [setPage, activePage]);
 
   return (
     <nav aria-label="Page navigation" className="flex justify-center my-10">
@@ -78,7 +78,7 @@ export const Pager: React.FC<IProps> = ({ noOfItems=0, setPage }) => {
       </ul>
     </nav>
   );
-};
+});
 
 Pager.propTypes = {
   noOfItems: PropTypes.number.isRequired,

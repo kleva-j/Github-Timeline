@@ -56,6 +56,18 @@ export const mockAllJobs = {
   },
 };
 
+export const mockAllEmptyJobs = {
+  request: {
+    query: LOAD_JOBS,
+    variables: {},
+  },
+  result: {
+    data: {
+      jobs: [],
+    },
+  },
+};
+
 export const errorMockAllJobs = {
   request: mockAllJobs.request,
   error: new Error('An error occurred'),
@@ -66,21 +78,28 @@ export const getAllJobsMockData = {
     loading: true,
     error: undefined,
     data: {
-      jobs: []
-    }
+      jobs: [],
+    },
   },
   successState: {
     loading: false,
     error: undefined,
-    data: mockAllJobs.result.data
+    data: mockAllJobs.result.data,
   },
   errorState: {
     loading: false,
     error: new ApolloError({}),
     data: {
-      jobs: []
-    }
+      jobs: [],
+    },
+  },
+  emptyState: {
+    loading: false,
+    error: undefined,
+    data: {
+      jobs: [],
+    },
   },
   refetch: jest.fn(),
-  currentPage: 1
+  currentPage: 1,
 };

@@ -1,31 +1,20 @@
 import { render } from 'react-dom';
-import React, { StrictMode } from 'react';
-import { onError } from '@apollo/client/link/error';
+import { StrictMode } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import { UserProvider } from 'contexts/UserContext';
 import { AuthProvider } from 'contexts/AuthContext';
+import { link } from 'ApolloLinkConfig';
 
 import App from './App';
 
 import './index.css';
 
-const { log } = console;
-
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: from([
-    onError(({ graphQLErrors, networkError }) => {
-      if (graphQLErrors) {
-        graphQLErrors.forEach(({ message, locations, path }) =>
-          log(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`),
-        );
-      }
-      if (networkError) log(`[Network error]: ${networkError}`);
-    }),
-    new HttpLink({ uri: process.env.REACT_APP_BACKEND_JOBS_API }),
-  ]),
+  link,
+  queryDeduplication: false,
 });
 
 export const rootElement = document.getElementById('root');

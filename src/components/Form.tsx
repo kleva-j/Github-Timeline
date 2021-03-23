@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export const SearchForms: React.FC = () => {
+export const SearchForms: React.FC = memo(() => {
   return (
     <form className="flex flex-col sm:flex-row max-w-3xl mx-auto">
       <aside className="flex-1 my-2 md:mx-2 md:ml-0">
@@ -26,4 +26,4 @@ export const SearchForms: React.FC = () => {
       </aside>
     </form>
   );
-};
+});

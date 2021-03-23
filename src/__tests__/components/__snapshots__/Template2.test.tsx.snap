@@ -62,7 +62,7 @@ exports[`Template2 Should render the Template2 component. 1`] = `
         target="_blank"
       >
         <img
-          alt="avatar"
+          alt="Company Logo"
           class="mx-4 w-10 h-10 object-contain hidden sm:block"
           src="some_company_logo"
         />

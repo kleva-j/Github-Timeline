@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { Tag, TagContainer } from 'styled';
 
 type tTag = {
@@ -7,7 +7,7 @@ type tTag = {
 };
 
 const Tags: tTag[] = [
-  { title: 'Full Time', isActive: true },
+  { title: 'Full Time', isActive: false },
   { title: 'remote', isActive: false },
   { title: 'HTML', isActive: false },
   { title: 'CSS', isActive: false },
@@ -30,7 +30,7 @@ const Tags: tTag[] = [
   { title: 'C#', isActive: false },
   { title: 'Scala', isActive: false },
   { title: 'R', isActive: false },
-  
+
   { title: 'Kotlin', isActive: false },
   { title: 'PHP', isActive: false },
   { title: 'Rust', isActive: false },
@@ -44,14 +44,36 @@ const Tags: tTag[] = [
   { title: 'Clojure', isActive: false },
 ];
 
-export const TagList: React.FC = () => {
+export const TagList: React.FC<{ setParams: Function }> = memo(({ setParams }) => {
   const [state, setState] = useState(Tags);
 
   const handleClick = (index: number, isActive: boolean) => {
     const newList = [...state];
     newList[index].isActive = !isActive;
-    setState(newList);
+    setState(() => newList);
+    handleUpdate();
   };
+
+  const handleUpdate = useCallback(() => {
+    const newState = state;
+    const params = newState
+      .filter((item) => item.isActive)
+      .reduce(
+        (prev: any, next: tTag) => {
+          let { description, location, full_time } = prev;
+          if (next.title === 'Full Time') full_time = 'on';
+          else if (next.title === 'remote') location = 'remote';
+          else description = [...description, next.title];
+          return { description, location, full_time };
+        },
+        { description: [], location: '', full_time: '' },
+      );
+    setParams({
+      description: params.description.join('+') || undefined,
+      location: params.location || undefined,
+      full_time: params.full_time || undefined,
+    });
+  }, [state, setParams]);
 
   return (
     <TagContainer>
@@ -62,4 +84,4 @@ export const TagList: React.FC = () => {
       ))}
     </TagContainer>
   );
-};
+});

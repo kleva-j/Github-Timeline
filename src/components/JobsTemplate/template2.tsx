@@ -70,7 +70,7 @@ export const Template2: React.FC<Job> = ({
             <img
               className="mx-4 w-10 h-10 object-contain hidden sm:block"
               src={company_logo || defaultLogo}
-              alt="avatar"
+              alt="Company Logo"
             />
             <h1 className="text-gray-600 font-bold">{company}</h1>
           </a>

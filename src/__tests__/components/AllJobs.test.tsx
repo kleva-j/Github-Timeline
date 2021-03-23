@@ -2,7 +2,7 @@ import { cleanup, fireEvent } from '@testing-library/react';
 
 import { GetAllJobs } from 'components/AllJobs';
 import { customRender, waitForData } from 'testing-utils/customRender';
-import { errorMockAllJobs, getAllJobsMockData, mockAllJobs } from 'testing-utils/mocks';
+import { errorMockAllJobs, getAllJobsMockData, mockAllEmptyJobs, mockAllJobs } from 'testing-utils/mocks';
 
 describe('GetAllJobs', () => {
   afterEach(cleanup);
@@ -43,6 +43,19 @@ describe('GetAllJobs', () => {
     const errorState = getByTestId('error');
     expect(container.firstChild).toMatchSnapshot();
     expect(errorState).toBeInTheDocument();
+  });
+
+  test('it should test the no-content state.', async () => {
+    const { loading, error, data } = getAllJobsMockData.emptyState;
+    const refetch = jest.fn();
+    const { container, getByTestId } = customRender(
+      <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={1} />,
+      [mockAllEmptyJobs],
+    );
+    await waitForData();
+    const noContent = getByTestId('no-content');
+    expect(container.firstChild).toMatchSnapshot();
+    expect(noContent).toBeInTheDocument();
   });
 
   test('it should test the refetch is visible when in error state and clicked.', async () => {
