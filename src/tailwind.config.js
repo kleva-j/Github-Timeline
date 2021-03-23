@@ -18,7 +18,12 @@ const defaultScheme = {
 };
 
 module.exports = {
-  purge: ['./components/*.{js,jsx,ts,tsx}', './views/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: {
+    mode: 'all',
+    enabled: true,
+    preserveHtmlElements: false,
+    content: ['./components/*.{js,jsx,ts,tsx}', './views/*.{js,jsx,ts,tsx}', './public/index.html'],
+  },
   presets: [],
   darkMode: 'class',
   theme: {

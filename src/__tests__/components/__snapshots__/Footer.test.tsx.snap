@@ -25,8 +25,7 @@ exports[`Navbar Should render the Navbar with no props. 1`] = `
            
           <a
             class="text-white hover:text-gray-400 text-sm font-semibold py-1"
-            href="http://michaelobasi.com"
-            rel="noopener noreferrer"
+            href="/"
             target="_blank"
           >
             Github Timeline
@@ -111,8 +110,7 @@ exports[`Navbar Should render the Navbar. 1`] = `
            
           <a
             class="text-white hover:text-gray-400 text-sm font-semibold py-1"
-            href="http://michaelobasi.com"
-            rel="noopener noreferrer"
+            href="/"
             target="_blank"
           >
             Github Timeline

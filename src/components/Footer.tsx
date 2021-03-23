@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   absolute?: boolean;
 }
 
-export const Footer: React.FC<Props> = ({ absolute }) => {
+export const Footer: React.FC<Props> = memo(({ absolute }) => {
   return (
     <>
       <footer
@@ -17,14 +18,9 @@ export const Footer: React.FC<Props> = ({ absolute }) => {
             <div className="w-full md:w-4/12 px-4">
               <div className="text-sm text-white font-semibold py-1">
                 Copyright © {new Date().getFullYear()}{' '}
-                <a
-                  href="http://michaelobasi.com"
-                  className="text-white hover:text-gray-400 text-sm font-semibold py-1"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <Link to="/" className="text-white hover:text-gray-400 text-sm font-semibold py-1" target="_blank">
                   Github Timeline
-                </a>
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-8/12 px-4">
@@ -76,4 +72,4 @@ export const Footer: React.FC<Props> = ({ absolute }) => {
       </footer>
     </>
   );
-};
+});

@@ -1,5 +1,4 @@
-/* eslint-disable react/style-prop-object */
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
 import Bars from 'assets/svg/Bars.svg';
@@ -9,7 +8,7 @@ interface Props {
   navState?: boolean;
 }
 
-export const Navbar: React.FC<Props> = ({ transparent, navState = false }) => {
+export const Navbar: React.FC<Props> = memo(({ transparent, navState = false }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(navState);
   return (
     <nav
@@ -20,7 +19,10 @@ export const Navbar: React.FC<Props> = ({ transparent, navState = false }) => {
       }
     >
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <div
+          className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+          aria-labelledby="nav-item"
+        >
           <Link
             className={
               (transparent ? 'text-white' : 'text-gray-800') +
@@ -114,4 +116,4 @@ export const Navbar: React.FC<Props> = ({ transparent, navState = false }) => {
       </div>
     </nav>
   );
-};
+});
