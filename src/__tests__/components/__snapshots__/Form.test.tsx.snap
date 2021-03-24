@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Component Should populate description input and search. 1`] = `
+<form
+  class="flex flex-col sm:flex-row max-w-3xl mx-auto"
+>
+  <aside
+    class="flex-1 my-2 md:mx-2 md:ml-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="desc"
+    >
+      Job Description
+    </label>
+    <input
+      aria-label="description-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="desc"
+      id="desc"
+      name="description"
+      placeholder="Filter by title, benefits, companies, expertise"
+      type="text"
+    />
+  </aside>
+  <aside
+    class="flex-1 my-2 sm:mx-2 md:mr-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="loc"
+      id="location"
+      name="location"
+      placeholder="Filter by city, state, zip code or country"
+      type="text"
+    />
+  </aside>
+</form>
+`;
+
+exports[`Form Component Should populate location input (empty) and search. 1`] = `
+<form
+  class="flex flex-col sm:flex-row max-w-3xl mx-auto"
+>
+  <aside
+    class="flex-1 my-2 md:mx-2 md:ml-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="desc"
+    >
+      Job Description
+    </label>
+    <input
+      aria-label="description-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="desc"
+      id="desc"
+      name="description"
+      placeholder="Filter by title, benefits, companies, expertise"
+      type="text"
+    />
+  </aside>
+  <aside
+    class="flex-1 my-2 sm:mx-2 md:mr-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="loc"
+      id="location"
+      name="location"
+      placeholder="Filter by city, state, zip code or country"
+      type="text"
+    />
+  </aside>
+</form>
+`;
+
+exports[`Form Component Should populate location input and search. 1`] = `
+<form
+  class="flex flex-col sm:flex-row max-w-3xl mx-auto"
+>
+  <aside
+    class="flex-1 my-2 md:mx-2 md:ml-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="desc"
+    >
+      Job Description
+    </label>
+    <input
+      aria-label="description-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="desc"
+      id="desc"
+      name="description"
+      placeholder="Filter by title, benefits, companies, expertise"
+      type="text"
+    />
+  </aside>
+  <aside
+    class="flex-1 my-2 sm:mx-2 md:mr-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="loc"
+      id="location"
+      name="location"
+      placeholder="Filter by city, state, zip code or country"
+      type="text"
+    />
+  </aside>
+</form>
+`;
+
+exports[`Form Component Should render the form component. 1`] = `
+<form
+  class="flex flex-col sm:flex-row max-w-3xl mx-auto"
+>
+  <aside
+    class="flex-1 my-2 md:mx-2 md:ml-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="desc"
+    >
+      Job Description
+    </label>
+    <input
+      aria-label="description-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="desc"
+      id="desc"
+      name="description"
+      placeholder="Filter by title, benefits, companies, expertise"
+      type="text"
+    />
+  </aside>
+  <aside
+    class="flex-1 my-2 sm:mx-2 md:mr-0"
+  >
+    <label
+      class="text-sm font-semibold"
+      for="location"
+    >
+      Location
+    </label>
+    <input
+      aria-label="location-input"
+      class="w-full py-2 px-4 border rounded bg-white"
+      data-testid="loc"
+      id="location"
+      name="location"
+      placeholder="Filter by city, state, zip code or country"
+      type="text"
+    />
+  </aside>
+</form>
+`;
