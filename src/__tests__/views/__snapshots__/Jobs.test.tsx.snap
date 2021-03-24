@@ -115,7 +115,9 @@ exports[`Jobs Page should render the Jobs page 1`] = `
           Job Description
         </label>
         <input
+          aria-label="description-input"
           class="w-full py-2 px-4 border rounded bg-white"
+          data-testid="desc"
           id="desc"
           name="description"
           placeholder="Filter by title, benefits, companies, expertise"
@@ -132,7 +134,9 @@ exports[`Jobs Page should render the Jobs page 1`] = `
           Location
         </label>
         <input
+          aria-label="location-input"
           class="w-full py-2 px-4 border rounded bg-white"
+          data-testid="loc"
           id="location"
           name="location"
           placeholder="Filter by city, state, zip code or country"

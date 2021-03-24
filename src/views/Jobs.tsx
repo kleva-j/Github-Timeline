@@ -52,7 +52,7 @@ export const Jobs: React.FC = () => {
       <section className="min-h-screen">
         <Navbar transparent={false} />
         <article className="my-4 px-3">
-          <SearchForms />
+          <SearchForms setParam={setParams} />
           <TagList setParams={setParams} />
           <GetAllJobs loading={loading} error={error} data={data} refetch={refetch} currentPage={currentPage} />
           <Pager noOfItems={noOfItems || 0} setPage={setPage} />
