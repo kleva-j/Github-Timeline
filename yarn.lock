@@ -1963,10 +1963,10 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^12.6.3":
-  version "12.8.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.8.1.tgz#aa897d6e7f0cf2208385abc2da2ac3f5844bbd00"
-  integrity sha512-u521YhkCKip0DQNDpfj9V97PU7UlCTkW5jURUD4JipuVe/xDJ32dJSIHlT2pqAs/I91OFB8p6LtqaLZpOu8BWQ==
+"@testing-library/user-event@^12.8.3":
+  version "12.8.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
+  integrity sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
@@ -2111,10 +2111,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.32.tgz#90c5c4a8d72bbbfe53033f122341343249183448"
   integrity sha512-/Ctrftx/zp4m8JOujM5ZhwzlWLx22nbQJiVqz8/zE15gOeEW+uly3FSX4fGFpcfEvFzXcMCJwq9lGVWgyARXhg==
 
-"@types/node@^12.0.0":
-  version "12.20.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.4.tgz#73687043dd00fcb6962c60fbf499553a24d6bdf2"
-  integrity sha512-xRCgeE0Q4pT5UZ189TJ3SpYuX/QGl6QIAOAIeDSbAVAd2gX1NxSZup4jNVK7cxIeP8KDSbJgcckun495isP1jQ==
+"@types/node@^12.20.5":
+  version "12.20.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.12.tgz#fd9c1c2cfab536a2383ed1ef70f94adea743a226"
+  integrity sha512-KQZ1al2hKOONAs2MFv+yTQP1LkDWMrRJ9YCVRalXltOfXsBmH5IownLxQaiq0lnAHwAViLnh2aTYqrPcRGEbgg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -8147,10 +8147,10 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
 
-nanoid@^3.1.20:
-  version "3.1.20"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
-  integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
+nanoid@^3.1.22:
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
+  integrity sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -9614,13 +9614,13 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, po
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.0, postcss@^8.2.1:
-  version "8.2.7"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.7.tgz#48ed8d88b4de10afa0dfd1c3f840aa57b55c4d47"
-  integrity sha512-DsVLH3xJzut+VT+rYr0mtvOtpTjSyqDwPf5EZWXcb0uAKfitGpTY9Ec+afi2+TgdN8rWS9Cs88UDYehKo/RvOw==
+postcss@^8, postcss@^8.1.0, postcss@^8.2.1:
+  version "8.2.10"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.10.tgz#ca7a042aa8aff494b334d0ff3e9e77079f6f702b"
+  integrity sha512-b/h7CPV7QEdrqIxtAf2j31U5ef05uBDuvoXv6L51Q4rcS1jdlXAVKJv+atCFdUXYl9dyTHGyoMzIepwowRJjFw==
   dependencies:
     colorette "^1.2.2"
-    nanoid "^3.1.20"
+    nanoid "^3.1.22"
     source-map "^0.6.1"
 
 prelude-ls@^1.2.1:
