@@ -44,7 +44,7 @@ export function parseJSON<T>(value: string | null): T | undefined {
 }
 
 export const getJobDetails = (job) => {
-  const { slug, commitment, title, description = '', remotes, company, postedAt, tags = [] } = job;
+  const { slug = "", commitment, title = '', description = '', remotes, company, postedAt, tags = [], applyUrl = '' } = job;
   const cities = job.cities || [];
   const { name: city, country } = cities[0] ?? {};
   const isRemote = !!(remotes && remotes.length);
@@ -69,5 +69,6 @@ export const getJobDetails = (job) => {
     country,
     cities,
     tags,
+    applyUrl,
   };
 };

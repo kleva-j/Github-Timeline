@@ -8,9 +8,8 @@ import { LOAD_SINGLE_JOB } from 'graphqL/queries.graphql';
 import tw from 'tailwind.macro';
 
 import { ErrorComponent } from './Error';
+import { Cross } from './icons/cross';
 import { Job } from './Job';
-
-import Cross from './icons/cross';
 
 interface PropsType {
   handleClose: MouseEventHandler;
@@ -24,13 +23,11 @@ export const JobModal = forwardRef<HTMLDivElement, PropsType>(({ handleClose, co
     notifyOnNetworkStatusChange: true,
   });
 
-  console.log(data);
-
   return (
     <section className="w-full fixed z-10 right-0 h-full top-0 overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700 bg-gray-900 bg-opacity-50 flex justify-center">
       <Article ref={ref}>
         <Cross size={24} className="self-end cursor-pointer hover:bg-gray-100 p-1 rounded-full" onClick={handleClose} />
-        <div className="flex justify-center items-center w-full h-full overflow-y-auto no-scrollbar">
+        <div className="flex justify-center items-center w-full h-full overflow-y-auto no-scrollbar px-2">
           {loading && <Loader children={<div className="frame" />} />}
           {error && <ErrorComponent refetch={() => refetch()} />}
           {data && <Job {...data.job} />}

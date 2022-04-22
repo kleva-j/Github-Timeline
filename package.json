@@ -25,6 +25,8 @@
     "react-pagination-hook": "^0.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "rehype-raw": "^6.1.1",
+    "rehype-sanitize": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "rxjs": "^6.6.3",
     "styled-components": "^5.2.1",
