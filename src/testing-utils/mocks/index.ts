@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client';
-import { LOAD_JOBS, LOAD_SINGLE_JOB } from 'GraphQL/Queries';
+import { LOAD_JOBS, LOAD_SINGLE_JOB } from 'graphqL/queries.graphql';
 
 export const mockSingleJob = {
   request: {

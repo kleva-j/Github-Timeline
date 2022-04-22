@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { Job } from 'components/SingleJob';
-
 import { JobItem, TagSm } from 'styled';
 
-export const Template1: React.FC<Job> = ({ id, title, company, created_at, url, type, location }) => {
+export const Template1: React.FC<any> = ({ id, title, company, created_at, url, type, location }) => {
   return (
     <JobItem data-testid={`job-${id}`}>
       <main className="self-stretch w-20 mr-5 border"></main>

@@ -4,24 +4,24 @@ import { ApolloError } from '@apollo/client';
 
 import { RefetchBtn } from 'styled';
 
-import { Job } from './SingleJob';
+// import { Job } from './SingleJob';
 import { Template2 } from './JobsTemplate';
 
 import loadingGif from 'assets/img/loading-gif.webp';
 import noContent from 'assets/img/no-content.webp';
 import errorGif from 'assets/img/error-gif.webp';
 
-interface IProps {
+interface Props {
   loading: boolean;
   error: ApolloError | undefined;
   data: {
-    jobs: Job[];
+    jobs: any[];
   };
   currentPage: number;
   refetch: Function;
 }
 
-export const GetAllJobs: React.FC<IProps> = memo(({ loading, error, data, currentPage, refetch }) => {
+export const GetAllJobs: React.FC<Props> = memo(({ loading, error, data, currentPage, refetch }) => {
   const limit = currentPage * 10;
   const offset = (currentPage - 1) * 10;
 
@@ -46,7 +46,7 @@ export const GetAllJobs: React.FC<IProps> = memo(({ loading, error, data, curren
         </div>
       )}
       <article className="w-full" data-testid="jobs-article">
-        {data?.jobs.slice(offset, limit).map((item: Job) => (
+        {data?.jobs.slice(offset, limit).map((item: any) => (
           <Template2 {...item} key={item.id} />
         ))}
       </article>

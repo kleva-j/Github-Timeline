@@ -55,4 +55,4 @@ export const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (networkError) log(`[Network error]: ${networkError}`);
 });
 
-export const link = from([errorLink, cancelRequestLink, new HttpLink({ uri: process.env.REACT_APP_BACKEND_JOBS_API })]);
+export const link = from([errorLink, cancelRequestLink, new HttpLink({ uri: process.env.REACT_APP_GRAPHQL_JOBS_API })]);

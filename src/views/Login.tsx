@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Route } from 'react-router-dom';
 
 import { Button, LoginBg } from 'styled';
 
@@ -22,7 +22,7 @@ export const Login: React.FC = () => {
   }, [history, isAuthenticated]);
 
   return (
-    <>
+    <Route exact path="/login">
       <Helmet>
         <title>Login - Github Timeline</title>
         <meta name="description" content="Gitline login page" />
@@ -57,6 +57,6 @@ export const Login: React.FC = () => {
           <Footer absolute />
         </section>
       </main>
-    </>
+    </Route>
   );
 };

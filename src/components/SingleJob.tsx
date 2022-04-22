@@ -2,29 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 
-import { LOAD_SINGLE_JOB } from 'GraphQL/Queries';
-
-export interface Job {
-  id: string;
-  title: string;
-  type: string;
-  company: string;
-  description: string;
-  url: string;
-  location: string;
-  created_at: string;
-  company_logo: string;
-  company_url: string;
-  how_to_apply: string;
-}
+import { LOAD_SINGLE_JOB } from 'graphqL/queries.graphql';
+import { SingleJob, SingleJobVariables } from 'graphqL/__generated__/SingleJob';
 
 interface Props {
-  id: string;
+  companySlug: string;
+  jobSlug: string;
 }
 
-export const GetSingleJob: React.FC<Props> = ({ id }) => {
-  const { error, loading, data } = useQuery(LOAD_SINGLE_JOB, {
-    variables: { id },
+export const GetSingleJob: React.FC<Props> = ({ companySlug = '', jobSlug = '' }) => {
+  const { error, loading, data } = useQuery<SingleJob, SingleJobVariables>(LOAD_SINGLE_JOB, {
+    variables: { companySlug, jobSlug },
   });
 
   if (loading)
@@ -42,14 +30,13 @@ export const GetSingleJob: React.FC<Props> = ({ id }) => {
 
   return (
     <aside>
-      {console.log(data)}
       <div key={data?.job?.id} className="bg-primary-input mx-4 my-4">
         <h5 data-testid="title">{data?.job?.title}</h5>
         <p data-testid="company">{data?.job?.company}</p>
-        <p data-testid="type">{data?.job?.type}</p>
-        <p data-testid="location">{data?.job?.location}</p>
-        <p data-testid="created">{data?.job?.created_at}</p>
-        <a data-testid="url" href={data?.job?.url}>
+        <p data-testid="type">{data?.job?.remotes}</p>
+        <p data-testid="location">{data?.job?.locationNames}</p>
+        <p data-testid="created">{data?.job.createdAt}</p>
+        <a data-testid="url" href={data?.job?.company?.websiteUrl}>
           Read More...
         </a>
       </div>
@@ -58,5 +45,6 @@ export const GetSingleJob: React.FC<Props> = ({ id }) => {
 };
 
 GetSingleJob.propTypes = {
-  id: PropTypes.string.isRequired,
+  companySlug: PropTypes.string.isRequired,
+  jobSlug: PropTypes.string.isRequired,
 };

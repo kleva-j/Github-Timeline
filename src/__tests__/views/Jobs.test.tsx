@@ -2,7 +2,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { cleanup } from '@testing-library/react';
 
 import App from 'App';
-import { LOAD_JOBS } from 'GraphQL/Queries';
+import { LOAD_JOBS } from 'graphqL/queries.graphql';
 import { AuthProvider } from 'contexts/AuthContext';
 import { customRender, waitForData } from 'testing-utils/customRender';
 

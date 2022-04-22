@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { useQuery } from '@apollo/client';
-import React, { useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { v5 as uuidNameSpace, v4 as getNS } from 'uuid';
 
 import { Footer } from 'components/Footer';
@@ -10,7 +10,7 @@ import { Pager } from 'components/Pagination';
 import { SearchForms } from 'components/Form';
 import { GetAllJobs } from 'components/AllJobs';
 
-import { LOAD_JOBS } from 'GraphQL/Queries';
+import { LOAD_JOBS } from 'graphqL/queries.graphql';
 
 const GenerateNameSpace = getNS();
 
@@ -21,7 +21,7 @@ interface IState {
   full_time: string | undefined;
 }
 
-export const Jobs: React.FC = () => {
+export const Jobs: FC = () => {
   const [state, setState] = useState<IState>({
     page: 1,
     description: undefined,

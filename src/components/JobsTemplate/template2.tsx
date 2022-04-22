@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Job } from 'components/SingleJob';
 
 import { JobItem2, TagSm } from 'styled';
 import defaultLogo from 'assets/svg/Company_logo.svg';
@@ -20,7 +19,7 @@ const options: DateTimeFormatOptions = {
 
 const lang: string = navigator.language || 'en-US';
 
-export const Template2: React.FC<Job> = ({
+export const Template2: React.FC<any> = ({
   id,
   title,
   company,
