@@ -16,8 +16,8 @@ import { OfficeIcon } from './icons/office';
 import { Tag } from './Tag';
 
 enum tabs {
-  description = "description",
-  company = "company",
+  description = 'description',
+  company = 'company',
 }
 
 export const Job: FC<SingleJob_job> = (job) => {
@@ -27,10 +27,10 @@ export const Job: FC<SingleJob_job> = (job) => {
   return (
     <aside className="relative top-0 h-full flex flex-col justify-between w-full">
       <div className="flex flex-col justify-between items-center">
-        <div className="h-28 w-28 my-4 bg-gray-100 rounded-md border flex justify-center items-center">
+        <div className="h-16 w-16 md:h-28 md:w-28 md:my-4 bg-gray-100 rounded-md border flex justify-center items-center">
           <img
             src={company?.logoUrl || 'https://via.placeholder.com/150'}
-            className="h-16 w-16 rounded-full object-cover"
+            className="h-10 w-10 md:h-16 md:w-16 rounded-full object-cover"
             alt="Company logo"
             loading="lazy"
           />
@@ -68,21 +68,21 @@ export const Job: FC<SingleJob_job> = (job) => {
               <ul className="flex items-center h-full">
                 <li
                   onClick={() => setActiveTab(tabs.description)}
-                  className={
+                  className={`text-sm px-4 font-bold ${
                     activeTab === tabs.description
-                      ? 'text-sm text-gray-800 py-2 px-4 bg-gray-200 rounded-full font-bold'
-                      : 'text-sm text-gray-400 py-3 px-4 font-bold cursor-pointer'
-                  }
+                      ? 'text-gray-800 py-2 bg-gray-200 rounded-full'
+                      : 'text-gray-400 py-3 cursor-pointer'
+                  }`}
                 >
                   Description
                 </li>
                 <li
                   onClick={() => setActiveTab(tabs.company)}
-                  className={
+                  className={`text-sm px-4 font-bold ${
                     activeTab === tabs.company
-                      ? 'text-sm text-gray-800 py-2 px-4 bg-gray-200 rounded-full font-bold'
-                      : 'text-sm text-gray-400 py-3 px-4 font-bold cursor-pointer'
-                  }
+                      ? 'text-gray-800 py-2 bg-gray-200 rounded-full'
+                      : 'text-gray-400 py-3 cursor-pointer'
+                  }`}
                 >
                   Company
                 </li>
@@ -91,7 +91,7 @@ export const Job: FC<SingleJob_job> = (job) => {
           </div>
         </div>
 
-        { activeTab === tabs.description && (
+        {activeTab === tabs.description && (
           <ReactMarkdown
             rehypePlugins={[rehypeRaw, rehypeSanitize]}
             remarkPlugins={[gfm]}
@@ -115,14 +115,16 @@ export const Job: FC<SingleJob_job> = (job) => {
           <div className="w-full">
             <h3 className="mt-5 mb-1 text-gray-800 font-bold">Company Details</h3>
             <p className="mt-4 mb-2 text-sm text-gray-600">
-              Website URL: <a href={company.websiteUrl} target="_blank" rel="noreferrer noopener" className="text-blue-500">{company.websiteUrl}</a>
+              Website URL:{' '}
+              <a href={company.websiteUrl} target="_blank" rel="noreferrer noopener" className="text-blue-500">
+                {company.websiteUrl}
+              </a>
             </p>
           </div>
         )}
-
       </div>
       <div className="sticky bottom-0 pt-2 bg-gray-50 w-full mx-auto">
-        <ApplyBtn onClick={() => window.open(applyUrl, "_blank", "noreferrer, noopener")}>Apply</ApplyBtn>
+        <ApplyBtn onClick={() => window.open(applyUrl, '_blank', 'noreferrer, noopener')}>Apply</ApplyBtn>
       </div>
     </aside>
   );
@@ -143,7 +145,7 @@ const ApplyBtn = styled(Button)`
 `;
 
 const Title = styled('h3')`
-  ${tw`text-lg font-semibold mt-2 mb-1`}
+  ${tw`text-lg font-semibold mt-2 mb-1 text-center`}
 
   color: #424b5c;
 `;

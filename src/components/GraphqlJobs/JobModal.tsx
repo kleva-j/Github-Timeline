@@ -38,11 +38,14 @@ export const JobModal = forwardRef<HTMLDivElement, PropsType>(({ handleClose, co
 });
 
 const Article = styled('aside')`
-  ${tw`w-full max-w-md bg-gray-50 p-3 mx-2 my-4 mt-24 shadow rounded-md flex flex-col`}
+  ${tw`w-full max-w-md bg-gray-50 p-3 mx-2 md:my-4 h-full md:mt-24 shadow rounded-md flex flex-col`}
 
-  max-height: 45rem;
   padding: 0.75rem;
   background-color: rgb(249 250 251);
+  
+  @media (min-width: 768px) {
+    max-height: 45rem;
+  }
 `;
 
 const flipAnimation = keyframes`
